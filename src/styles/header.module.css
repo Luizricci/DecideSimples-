@@ -1,0 +1,43 @@
+
+.container{
+    width: 100%;
+    height: 4.688rem;
+    background: #1F6F78;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 0.625rem 0.625rem;
+}
+.logo{
+    height: 80%;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    color: rgb(213, 221, 230); /*cor de texto*/
+}
+.menu{
+    display: flex;
+    gap: 1.25rem;
+    margin-right: 6rem;
+}
+
+.menuItem{
+    color: rgb(213, 221, 230); /*cor de texto*/
+    font-size: 1.6rem;
+    font-weight: 500;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    gap: 6rem;
+}
+.menuItem a {
+    color: rgb(213, 221, 230); /*cor de texto*/
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+.menuItem a:hover {
+    color: rgb(255, 255, 255); /*cor de texto ao passar o mouse*/
+    transform: scale(1.05);
+}
