@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 0 0 0.625rem 0.625rem;
+    position: relative;
 }
 .logo{
     height: 80%;
@@ -41,4 +41,111 @@
 .menuItem a:hover {
     color: rgb(255, 255, 255); /*cor de texto ao passar o mouse*/
     transform: scale(1.05);
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 1.5rem;
+    z-index: 1001;
+}
+
+.hamburgerLine {
+    width: 28px;
+    height: 3px;
+    background-color: rgb(213, 221, 230);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburgerLine.open:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburgerLine.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburgerLine.open:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #1F6F78;
+    border-radius: 0 0 0.625rem 0.625rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.mobileMenuOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobileMenuItem {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.mobileMenuItem li {
+    padding: 0;
+}
+
+.mobileMenuItem a {
+    display: block;
+    padding: 1rem 2rem;
+    color: rgb(213, 221, 230);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.mobileMenuItem a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        margin-left: 1rem;
+    }
 }
