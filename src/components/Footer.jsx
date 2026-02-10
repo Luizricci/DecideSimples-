@@ -15,9 +15,9 @@ export default function Footer() {
                 <h3>Navegação</h3>
                 <ul className={styles.links}>
                     <li><a href="/home">Início</a></li>
-                    <li><a href="/calculadoras">Calculadoras</a></li>
-                    <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="/contato">Contato</a></li>
+                    <li><a href="/Calculadoras">Calculadoras</a></li>
+                    <li><a href="/Sobre">Sobre</a></li>
+                    <li><a href="/Contato">Contato</a></li>
                 </ul>
             </div>
         </div>
